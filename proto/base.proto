@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package service;
+option go_package="./pd";
+
+enum DimTime {
+  DTimeUnknown = 0;
+  Year = 1;
+  Month = 2;
+  Day = 3;
+  Hour = 4;
+  Minute = 5;
+  Second = 6;
+}
+
+enum DimRegion {
+  DRegionUnknown = 0;
+  Province = 1;
+  City = 2;
+  District = 3;
+}
+
+message Region {
+  string province = 1;
+  string city = 2;
+  string District = 3;
+}
